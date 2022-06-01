@@ -25,7 +25,6 @@ const auth = getAuth(firebaseApp);
 export const storage = getStorage(firebaseApp);
 export const productos = collection(db, "productos");
 
-
 onAuthStateChanged(auth, async (usuarioFirebase) => {
     if (usuarioFirebase) {
         const uid = usuarioFirebase.uid;

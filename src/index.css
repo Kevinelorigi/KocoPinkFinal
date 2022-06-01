@@ -5,8 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
+
 ul {
     list-style: none;
 }
@@ -532,6 +533,31 @@ a.text {
     transition: all 0.3s ease;
 }
 
+/*Contacto*/
+.contacto {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.contenedor-contacto {
+    max-width: 250px;
+    padding: 20px 50px;
+}
+
+.contacto .contenedor-contacto a:hover {
+    background: none;
+
+}
+
+.contacto-whats img {
+    cursor: pointer;
+    width: 150px;
+    text-decoration: none;
+}
+
+
 
 
 
@@ -626,13 +652,16 @@ a.text {
     .display-galery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .image-index img{
+
+    .image-index img {
         width: 250px;
     }
+
     .image-udi img {
         width: 130px;
     }
-    .list li p{
+
+    .list li p {
         font-size: 13px;
     }
 

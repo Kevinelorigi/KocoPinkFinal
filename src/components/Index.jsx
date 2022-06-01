@@ -1,14 +1,12 @@
 import React from "react";
 import UDI from "../img/Logo-udi-web.png";
-import KocoPink from "../img/GORILA.jpg";
-import toast, { Toaster } from 'react-hot-toast';
+import KocoPink from "../img/EOqwLa7X4AMWWn2.jpg";
 
 function Home() {
   return (
     <div className="hero">
-      <Toaster />
       <div className="main">
-        <h2>
+        < h2>
           Calidad y elegancia hecho con <span className="love">amor!</span>
         </h2>
         <div className="image-index">
