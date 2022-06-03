@@ -1,6 +1,6 @@
 import React from "react";
 import UDI from "../img/Logo-udi-web.png";
-import KocoPink from "../img/EOqwLa7X4AMWWn2.jpg";
+import KocoPink from "../img/NDaHTa5.png";
 
 function Home() {
   return (
@@ -40,9 +40,9 @@ function Home() {
           <div className="personas">
             <ul className="list">
               <li>
-                <p>KEVIN VEGA</p>
-                <p>JULIAN HERNANDEZ</p>
-                <p>RONY RAMIREZ</p>
+                <p>🎓KEVIN VEGA</p>
+                <p>🎓JULIAN HERNANDEZ</p>
+                <p>🎓RONY RAMIREZ</p>
               </li>
             </ul>
           </div>

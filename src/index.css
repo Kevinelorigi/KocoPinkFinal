@@ -266,12 +266,12 @@ nav ul li a {
 @keyframes ring {
     0% {
         transform: rotate(0deg);
-        box-shadow: 1px 5px 2px purple;
+        box-shadow: 1px 5px 2px rgb(252,7,123);
     }
 
     50% {
         transform: rotate(180deg);
-        box-shadow: 1px 5px 2px rgb(71, 1, 71);
+        box-shadow: 1px 5px 2px purple;
     }
 
     100% {
@@ -410,7 +410,7 @@ nav ul li a {
 }
 
 .image-index img {
-    width: 300px;
+    width: 250px;
     border-radius: 10px;
 }
 
@@ -421,6 +421,7 @@ nav ul li a {
     width: 100%;
     height: max-content;
     border-radius: 25px;
+    justify-content: space-evenly;
 }
 
 .footer h1 {
@@ -535,22 +536,36 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+        
+}
+.contenedor-contacto h2{
+    margin-top: 25px;
 }
 
 .contenedor-contacto {
     padding: 25px;
-    height: 100%;
+    height: 80%;
     text-align: center;
     width: 50%;
+    background: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
+
 .contenedor-contacto p{
+    margin: 5px;
     padding: 10px;
 }
-.contenedor-contacto h2{
-    margin-bottom: 25px;
-}
-.logo-w img{
-    width: 150px;
+
+
+
+/*MAPA*/
+.leaflet-container{
+    margin: 0 50px;
+    width: 80%;
+    height: 80% ;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -653,12 +668,7 @@ nav ul li a {
   background: green;
 }
 
-/*MAPA*/
-.leaflet-container{
-    margin: 0 50px;
-    width: 80%;
-    height: 80%;
-}
+
 
 
 
@@ -746,20 +756,36 @@ nav ul li a {
         left: 0;
     }
 
+
     .display-galery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
+    .footer{
+        justify-content: space-around;
+    }
     .image-index img {
         width: 250px;
     }
 
     .image-udi img {
-        width: 130px;
+        margin: 0 auto;
+        width: 150px;
     }
 
     .list li p {
-        font-size: 13px;
+        font-size: 9px;
+    }
+    .contacto{
+        flex-direction: column;
+    }
+    .contenedor-contacto{
+        width: 100%;
+    }
+    .leaflet-container{
+        height: 70%;
+        width: 100%;
+        box-shadow: none;
+        z-index: 0;
     }
 
 }

@@ -21,13 +21,16 @@ function Contacto() {
           <h1>Servicios</h1>
           <ul>
             <li>
-              <p>UÑAS</p>
+              <p>⭐UÑAS</p>
             </li>
             <li>
-              <p>ESTAMPADOS</p>
+              <p>⭐ESTAMPADOS</p>
+            </li>
+            <li>
+              <p>⭐PLANCHADO DE PELO</p>
             </li>
           </ul>
-          <h2>Agenda tu cita</h2>
+          <h2>📃Agenda tu cita</h2>
         </div>
         <div className="wrapper">
           <div className="icon whatsapp">
