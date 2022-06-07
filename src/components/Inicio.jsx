@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import firebaseApp from "../firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { AuthContext } from "../context/AuthContext";
 import Index from "./Index";
 
 const auth = getAuth(firebaseApp);
 
 function Inicio() {
+  const { dispatch } = useContext(AuthContext);
+
   const navegate = useNavigate();
   const [hidden, setHidden] = useState(false);
   const [type, setType] = useState("password");
@@ -18,10 +21,13 @@ function Inicio() {
     const password = e.target.password.value;
 
     await signInWithEmailAndPassword(auth, email, password)
-      .then((user) => {
+      .then((userCredential) => { 
+        const user = userCredential.user
+        console.log(user);
+        dispatch({ type: "LOGIN", payload: user });
         toast.success("Bienvenido!");
-        window.location.reload();
-        // navegate("/index");
+        navegate("/archivos");
+       // window.location.reload();
       })
       .catch((error) => {
         toast.error("Esta cuenta no existe");
@@ -80,14 +86,14 @@ function Inicio() {
                     Ingresar
                   </button>
                 </form>
-                <div className="login-singup">
+                {/* <div className="login-singup">
                   <span className="text">
                     No tienes cuenta?
                     <a href="./Registro" className="text singup-text">
                       Registrarme
                     </a>
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

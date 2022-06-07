@@ -6,7 +6,7 @@ function Contacto() {
   return (
     <div className="contacto">
       <MapContainer
-        center={[7.065310889674422, -73.83886154743772]}
+        center={[7.065252400654, -73.83670887388021]}
         zoom={17}
         scrollWheelZoom={false}
       >
@@ -14,7 +14,7 @@ function Contacto() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[7.0653747738743675, -73.83881863209552]}></Marker>
+        <Marker position={[7.065264966735722, -73.83683186556948]}></Marker>
       </MapContainer>
       <div className="contenedor-contacto">
         <div className="services">

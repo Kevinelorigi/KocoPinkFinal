@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useContext } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Index from "./components/Index";
@@ -11,7 +11,14 @@ import NoPage from "./components/NoPage";
 
 import Archivos from "./components/Archivos";
 
+import { AuthContext } from "./context/AuthContext";
+
 function App() {
+  const { currentUser } = useContext(AuthContext);
+
+  const RequiredAuth = ({ children }) => {
+    return currentUser ? children : <Navigate to="/admin" />;
+  };
 
   return (
     <BrowserRouter>
@@ -22,8 +29,18 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/admin" element={<Inicio />} />
-        <Route path="/RGVtZSBwbGF0YSB5IGxlIGhhZ28gbWFzIGNvZGlnbw==" element={<Registro />} />
-        <Route path="/archivos" element={<Archivos />} />
+        <Route
+          path="/RGVtZSBwbGF0YSB5IGxlIGhhZ28gbWFzIGNvZGlnbw=="
+          element={<Registro />}
+        />
+        <Route
+          path="/archivos"
+          element={
+            <RequiredAuth>
+              <Archivos />
+            </RequiredAuth>
+          }
+        />
 
         <Route path="*" element={<NoPage />} />
       </Routes>

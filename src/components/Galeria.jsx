@@ -57,7 +57,7 @@ function Galeria() {
     <div className="galery">
       <Toaster />
       <div className="title-galery">
-        <h1>GALERIA</h1>
+        <h1 className="galery-t">GALERIA</h1>
       </div>
       {loading && (
         <div className="center">

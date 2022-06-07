@@ -22,6 +22,7 @@ function Navbar() {
     localStorage.removeItem("rol");
     setIsLoad(false);
     auth.signOut(signOut);
+    localStorage.removeItem("user");
     window.location.reload();
   }
 
