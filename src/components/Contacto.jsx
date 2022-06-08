@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 
 function Contacto() {
   return (
+    //Caja de Mapa
     <div className="cuadro-contacto">
       <div className="contacto">
         <MapContainer
@@ -17,6 +18,7 @@ function Contacto() {
           />
           <Marker position={[7.065264966735722, -73.83683186556948]}></Marker>
         </MapContainer>
+        {/*Caja de contacto*/}
         <div className="contenedor-contacto">
           <div className="services">
             <h1>Servicios</h1>
@@ -33,6 +35,7 @@ function Contacto() {
             </ul>
             <h2>📃Agenda tu cita</h2>
           </div>
+          {/*Redirección a Contacto*/}
           <div className="wrapper">
             <div className="icon whatsapp">
               <div className="tooltip">WhatsApp</div>

@@ -30,7 +30,7 @@ function App() {
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/admin" element={<Inicio />} />
         <Route
-          path="/RGVtZSBwbGF0YSB5IGxlIGhhZ28gbWFzIGNvZGlnbw=="
+          path="/registro"
           element={<Registro />}
         />
         <Route

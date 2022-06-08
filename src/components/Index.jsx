@@ -7,6 +7,7 @@ function Home() {
     <div className="hero">
       <div className="main">
         <div className="imagen-title">
+          {/*Presentación de la pagina */}
           <div className="h2">
             <h2>
               Calidad y elegancia hecho con <span className="love">amor!</span>
@@ -17,6 +18,7 @@ function Home() {
           </div>
         </div>
         <div className="wrapper">
+          {/*Botones de navegacion */}
           <div className="icon facebook">
             <div className="tooltip">Facebook</div>
             <span>
@@ -36,6 +38,7 @@ function Home() {
         </div>
       </div>
       <footer className="footer">
+        {/*Donde se desarrollo la pagina */}
         <h1>Desarrollado</h1>
         <div className="footer-flex">
           <div className="image-udi">
@@ -45,6 +48,7 @@ function Home() {
             <ul className="list">
               <li>
                 <strong>
+                  {/*Desarrolladores */}
                 <p>🎓KEVIN VEGA</p>
                 <p>🎓JULIAN HERNANDEZ</p>
                 <p>🎓RONY RAMIREZ</p>

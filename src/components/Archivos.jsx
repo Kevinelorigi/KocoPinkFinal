@@ -3,6 +3,7 @@ import { addDoc } from "firebase/firestore";
 import { uploadBytesResumable, getDownloadURL, ref } from "firebase/storage";
 import toast, { Toaster } from "react-hot-toast";
 import {productos, storage} from "../firebase";
+// Importaciones
 
 function Archivos() {
 
@@ -13,7 +14,7 @@ function Archivos() {
   const [image, setImage] = useState(null);
 
   const archivos = useRef();
-
+  // Error por si no llena los campos
   const createProduct = async (e) => {
     e.preventDefault();
     if (
@@ -44,7 +45,7 @@ function Archivos() {
         });
     }
   };
-
+  //Subir la imagen
   const uploadImage = (event) => {
     event.preventDefault();
     console.log(event.target.files[0]);
@@ -97,7 +98,7 @@ function Archivos() {
           <form 
           ref={archivos}
           onSubmit={createProduct}
-          >
+          >         
             <div className="input-fil">
               <input
                 type="text"

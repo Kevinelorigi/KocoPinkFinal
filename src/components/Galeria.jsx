@@ -6,6 +6,7 @@ import { storage, db } from "../firebase";
 import toast, { Toaster } from 'react-hot-toast';
 
 function Galeria() {
+  //Funciones para la subida de productos y coneccion con basé de datos
   const [load, setLoad] = useState(false);
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState([]);
@@ -25,7 +26,7 @@ function Galeria() {
       .catch((err) => {
         console.log(err);
       });
-
+      // Aviso de producto eliminado
     await deleteDoc(doc(db, "productos", item.id))
       .then(() => {
         toast.success("¡Producto eliminado!");
@@ -66,6 +67,7 @@ function Galeria() {
         </div>
       )}
       <section className="display-galery">
+        {/*Galeria conectada con basé de datos*/}
         {product &&
           product.map((val, id) => {
             return (

@@ -9,6 +9,7 @@ import Index from "./Index";
 const auth = getAuth(firebaseApp);
 
 function Inicio() {
+  // Variales de validación del usuario
   const { dispatch } = useContext(AuthContext);
 
   const navegate = useNavigate();
@@ -19,7 +20,7 @@ function Inicio() {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-
+    //Ingreso del usuario
     await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => { 
         const user = userCredential.user
@@ -29,11 +30,13 @@ function Inicio() {
         navegate("/archivos");
        // window.location.reload();
       })
+      //Si la cuenta no existe
       .catch((error) => {
         toast.error("Esta cuenta no existe");
         console.log(error);
       });
   }
+  //Para mirar la contraseña o ocultarla
 
   function hidePassword() {
     if (hidden) {

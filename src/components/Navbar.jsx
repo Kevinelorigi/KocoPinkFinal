@@ -6,6 +6,7 @@ import { UilBars } from "@iconscout/react-unicons";
 const auth = getAuth(firebaseApp);
 
 function Navbar() {
+  //Variables para el responsive
   const [isOpen, setIsOpen] = useState(false);
   const [isLoad, setIsLoad] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
@@ -18,6 +19,7 @@ function Navbar() {
   }, [usuarioFirebase]);
 
   function logout() {
+    //Para que el usuario pueda cerrar sesion
     localStorage.removeItem("usuarioFirebase");
     localStorage.removeItem("rol");
     setIsLoad(false);
@@ -35,6 +37,7 @@ function Navbar() {
             <label htmlFor="check" className="checkbtn">
               {!isOpen ? <UilBars /> : <UilBars />}
             </label>
+            {/*Si el admin está ingresado */}
             <Link className="logo" to={"/index"}>
               KocoPink
             </Link>
