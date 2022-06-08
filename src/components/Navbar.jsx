@@ -35,7 +35,9 @@ function Navbar() {
             <label htmlFor="check" className="checkbtn">
               {!isOpen ? <UilBars /> : <UilBars />}
             </label>
-            <label className="logo">KocoPink</label>
+            <Link className="logo" to={"/index"}>
+              KocoPink
+            </Link>
             <ul className="selectors">
               <li>
                 <Link className="link" onClick={handleClick} to={"/index"}>
@@ -72,7 +74,9 @@ function Navbar() {
             <label htmlFor="check" className="checkbtn">
               {!isOpen ? <UilBars /> : <UilBars />}
             </label>
-            <label className="logo">KocoPink</label>
+            <Link className="logo" to={"/index"}>
+              KocoPink
+            </Link>
             <ul className="selectors">
               <li>
                 <Link className="link" onClick={handleClick} to={"/index"}>

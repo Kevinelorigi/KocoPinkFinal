@@ -28,7 +28,7 @@ function Home() {
           <div className="icon instagram">
             <div className="tooltip">Instagram</div>
             <span>
-              <a href="#">
+              <a href="https://www.instagram.com/koco.pink/" target="_blank" >
                 <i className="uil uil-instagram-alt"></i>
               </a>
             </span>
