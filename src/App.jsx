@@ -21,6 +21,7 @@ function App() {
   };
 
   return (
+    //Rutas de la pagina
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -30,7 +31,7 @@ function App() {
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/admin" element={<Inicio />} />
         <Route
-          path="/registro"
+          path="U2kgcXVpZXJlIHJlZ2lzdHJvIHBhZ2U="
           element={<Registro />}
         />
         <Route

@@ -120,6 +120,8 @@ nav ul li a {
     width: 100vw;
 }
 
+
+
 .container {
     position: relative;
     max-width: 430px;
@@ -533,8 +535,13 @@ nav ul li a {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.editor{
+    background-color: red;
+    position: absolute;
+    padding: 0 35px;
+}
 
-.info-galery button {
+.input-delete{
     border: none;
     margin: 3px;
     padding: 8px;
@@ -544,6 +551,20 @@ nav ul li a {
     letter-spacing: 1px;
     border-radius: 6px;
     background-color: red;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-edit{
+    border: none;
+    margin: 3px;
+    padding: 8px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: blue;
     cursor: pointer;
     transition: all 0.3s ease;
 }
