@@ -106,6 +106,7 @@ function Archivos() {
                 placeholder="Título"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
+                autoComplete="off"
                 required
               />
             </div>
